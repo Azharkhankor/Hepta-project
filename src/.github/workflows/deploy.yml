@@ -3,12 +3,11 @@ name: Deploy Vite to GitHub Pages
 on:
   push:
     branches:
-      - main  # Run the workflow on pushes to the main branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
@@ -27,5 +26,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Deploy to the gh-pages branch
-          folder: dist      # Folder that contains the built files, typically `dist`
+          branch: gh-pages
+          folder: dist
